@@ -31,6 +31,8 @@ export default function JobsPage(){
                    }),
   });
 
+  const jobs = data?.content ?? [];
+
   return (
     <div className="mx-auto max-w-6xl p-8">
 
@@ -61,7 +63,7 @@ export default function JobsPage(){
 
       {/* Danh sách Job */}
       <div className="mt-6 space-y-4">
-        {data?.content.map((job) => (
+        {jobs.map((job) => (
           <JobCard
             key={job.id}
             job={job}
