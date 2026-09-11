@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function EmployerDashboard() {
 
   return (
@@ -9,17 +11,17 @@ export default function EmployerDashboard() {
 
       <div className="mt-6 grid gap-4 md:grid-cols-3">
 
-        <div className="rounded-xl border p-6">
+        <Link to="/employer/jobs" className="rounded-xl border p-6">
           My Jobs
-        </div>
+        </Link>
 
-        <div className="rounded-xl border p-6">
+        <Link to="/employer/applications" className="rounded-xl border p-6">
           Applications
-        </div>
+        </Link>
 
-        <div className="rounded-xl border p-6">
+        <Link to="/employer/jobs/new" className="rounded-xl border p-6">
           Create Job
-        </div>
+        </Link>
 
       </div>
 

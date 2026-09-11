@@ -1,5 +1,6 @@
-export default function CandidateDashboard() {
+import { Link } from "react-router-dom";
 
+export default function CandidateDashboard() {
   return (
     <div className="mx-auto max-w-6xl p-8">
 
@@ -9,9 +10,9 @@ export default function CandidateDashboard() {
 
       <div className="mt-6 grid gap-4 md:grid-cols-3">
 
-        <div className="rounded-xl border p-6">
-          Applications
-        </div>
+        <Link to="/candidate/applications" className="rounded-xl border p-6">
+          My Applications
+        </Link>
 
         <div className="rounded-xl border p-6">
           Saved Jobs

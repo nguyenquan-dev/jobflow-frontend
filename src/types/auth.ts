@@ -3,7 +3,9 @@ export type UserRole = "CANDIDATE" | "EMPLOYER" | "ADMIN";
 export interface User {
   id: number;
   email: string;
+  fullName: string;
   role: UserRole;
+  enabled: boolean;
 }
 
 export interface LoginRequest{
@@ -13,5 +15,17 @@ export interface LoginRequest{
 
 export interface LoginResponse{
   accessToken: string;
-  tokenType: string;
+  user: User;
+}
+
+export interface RegisterRequest{
+  email: string;
+  password: string;
+  fullName: string;
+}
+
+export interface RegisterResponse{
+  email: string;
+  fullName: string;
+  role: UserRole;
 }

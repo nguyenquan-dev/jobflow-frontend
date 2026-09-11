@@ -1,7 +1,8 @@
-import type {job}  from "../../types/job";
+import { Link } from "react-router-dom";
+import type {Job}  from "../../types/job";
 
 interface JobCardProps{
-  job: job;
+  job: Job;
 }
 
 export default function JobCard({job} : JobCardProps){
@@ -19,6 +20,10 @@ export default function JobCard({job} : JobCardProps){
       <p className="mt-1 text-sm text-gray-500">
         {job.employerName}
       </p>
+
+      <Link to={`/jobs/${job.id}`} className="mt-4 inline-block">
+        View Details
+      </Link>
 
     </div>
   );

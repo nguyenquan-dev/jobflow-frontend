@@ -33,16 +33,27 @@ export default function Navbar(){
                 Dashboard
               </Link>
 
-              <button onClick={logout}>
+              <button onClick={logout}
+                      className="text-sm font-medium text-gray-600 hover:text-gray-900">
                 Logout  
               </button>
             </>
 
           ) : (
+            <>
+              <Link
+                to="/register"
+                className="text-sm font-medium text-gray-600 hover:text-gray-900"
+              >
+                Register
+              </Link>
 
-            <Link to="/login">
-              Login
-            </Link>
+
+              <Link to="/login"
+                    className="text-sm font-medium text-gray-600 hover:text-gray-900">
+                Login
+              </Link>
+            </>
 
           )}
 

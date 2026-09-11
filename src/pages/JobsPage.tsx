@@ -1,6 +1,6 @@
 import {useQuery} from "@tanstack/react-query"
 import { useState } from "react";
-import {getJobs} from "../services/JobService"
+import { getJobs } from "../services/jobService";
 import JobCard from "../components/job/JobCard";
 import JobSearchBar from "../components/job/JobSearchBar"
 
@@ -15,7 +15,7 @@ export default function JobsPage(){
   const handleKeywordChange = (value : string) => {
     setKeyword(value);
     setPage(0);
-  };
+  };  
 
   const handleLocationChange = (value: string) => {
     setLocation(value);
@@ -42,8 +42,8 @@ export default function JobsPage(){
         <JobSearchBar
           keyword={keyword}
           location={location}
-          onKeywordChange={setKeyword}
-          onLocationChange={setLocation}
+          onKeywordChange={handleKeywordChange}
+          onLocationChange={handleLocationChange}
         />
       </div>
 
